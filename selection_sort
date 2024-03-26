@@ -1,0 +1,11 @@
+def selection_sort(lst):
+    for i in range(len(lst)):
+        min_ind = i
+        for j in range(i+1, len(lst)):
+            if lst[j]<lst[min_ind]:
+                min_ind = j
+        lst[i], lst[min_ind] = lst[min_ind], lst[i]
+        
+lst = [75, 85, 90, 95, 100, 80]     
+selection_sort(lst)
+print(lst)
